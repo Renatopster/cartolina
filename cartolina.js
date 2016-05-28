@@ -14,10 +14,12 @@ $(function () {
                 for (var index in data.times) {
                     buscarTimeAmigo(data.times[index]);
                 }
+                $('.cartolina-pontuacao-parcial').remove();
                 $("main").after('<div class="row cartolina-pontuacao-parcial" style="display:none">\n\
     <div class="small-24 medium-16 large-13 large-offset-2 xxlarge-9 xxlarge-offset-5 column">\n\
         <div class="row small-collapse">\n\
-            <div class="small-24 column cartola-secao__titulo cartola-liga-secao__titulo">PONTUAÇÃO PARCIAL</div>\n\
+            <div class="small-20 column cartola-secao__titulo cartola-liga-secao__titulo">PONTUAÇÃO PARCIAL</div>\n\
+            <div class="small-4 column cartola-secao__titulo cartolina-voltar" style="font-size: 1em;text-align: right;cursor:pointer">Voltar</div>\n\
         </div>\n\
         <div class="row small-collapse">\n\
             <div class="small-24 column cartolina-times-container"></div>\n\
@@ -115,6 +117,11 @@ $(function () {
             $('body').on('click', '.cartolina-btn-comparar-amigos', function (event) {
                 event.preventDefault();
                 buscarAmigos();
+            });
+            $('body').on('click', '.cartolina-voltar', function (event) {
+                event.preventDefault();
+                $('.cartolina-pontuacao-parcial').hide();
+                $('main').show();
             });
         }
     }());

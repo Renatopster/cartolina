@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "Cartolina",
     "description": "Adiciona funcionalidades ao Cartola FC",
-    "version": "1.0",
+    "version": "0.0.0.1",
     "icons": {
         "128": "icon128.png",
         "48": "icon48.png"
